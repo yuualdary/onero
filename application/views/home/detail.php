@@ -8,9 +8,18 @@
                      </div>
                      <div class="col-6">
                          <h1><?=$products['product_name'];?></h1>
-                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam consectetur quod non id dolorem ea expedita fugiat assumenda? 
-                             Maxime sit reiciendis accusamus! Magni cum doloremque doloribus, ipsum officia mollitia quia.</p>
-                     </div>
+                         <br>
+                         <br>
+                         <h3><?=$products['product_description'];?></h3>
+                    
+                     <br>
+                     <br>
+                     <br>
+                        <h4>Rp.<?=$products['product_price'];?></h4>
+                        </div>
+
+
+
 
                      <div class="col mb-2" style="padding: left 10px; " >
                                 <a href="<?= base_url(); ?>cart/CreateCart/<?=$products['id'];?>" class="btn btn-primary" style="float :right;">Add Cart</a>
