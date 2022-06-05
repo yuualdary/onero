@@ -6,25 +6,27 @@
           <div class="card-body">
         
         
-        <form action="<?php echo site_url('Product/PostProduct')?>" method="post"  enctype="multipart/form-data" >
-          <div class="form-group">
+        <form action="<?php echo site_url('Product/EditProduct/')?>" method="post"  enctype="multipart/form-data" >
+        <input type="hidden" name="id" value="<?=$products['id']; ?>"> 
+        <div class="form-group">
+
             <label for="exampleFormControlInput1">Product Name</label>
-            <input type="text" class="form-control" name="product_name" id="product_name" placeholder="Product Name">
+            <input type="text" class="form-control" value="<?=$products['product_name'];?>" name="product_name" id="product_name" placeholder="Product Name" >
           </div>
 
           <div class="form-group">
             <label for="exampleFormControlTextarea1">Product Description</label>
-            <textarea class="form-control" name="product_description" id="product_description" rows="3" placeholder="Product Description"></textarea>
+            <textarea class="form-control" name="product_description" id="product_description" rows="3" placeholder="Product Description" value="<?=$products['product_description'];?>"><?=$products['product_description'];?></textarea>
           </div>
 
           <div class="form-group">
             <label for="exampleFormControlSelect1">Product Price</label>
-            <input type="text" class="form-control" name="product_price" id="product_price" placeholder="Product Price"">
+            <input type="text" class="form-control" name="product_price" id="product_price" placeholder="Product Price"" value="<?=$products['product_price'];?>">
 
           </div>
           <div class="form-group">
             <label for="exampleFormControlSelect2">Product Quantity</label>
-            <input type="text" class="form-control" name="product_qty"id="product_qty" placeholder="Product Quantity">
+            <input type="text" class="form-control" name="product_qty"id="product_qty" placeholder="Product Quantity" value="<?=$products['product_qty'];?>">
 
           </div>
 

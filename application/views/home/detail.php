@@ -12,7 +12,14 @@
                              Maxime sit reiciendis accusamus! Magni cum doloremque doloribus, ipsum officia mollitia quia.</p>
                      </div>
 
+                     <div class="col mb-2" style="padding: left 10px; " >
+                                <a href="<?= base_url(); ?>cart/CreateCart/<?=$products['id'];?>" class="btn btn-primary" style="float :right;">Add Cart</a>
+                                <a href="<?= base_url(); ?>product/FormEditProduct/<?=$products['id'];?>" class="btn btn-primary" style="float :right;">Edit Product</a>
+                             </div>
+
                 </div>
+
+
             </div>
 
             <div class="container px-4 px-lg-5 mt-5">

@@ -22,14 +22,10 @@
                            
                             </div>
                             <div class="col-2 my-5">
-                                  <h3><i class="large material-icons mt-4" style="font-size: 50px">delete_forever</i></h3>
+                                  <h3><a href="<?= base_url(); ?>cart/DeleteCart/<?= $cart['id']; ?>"><i class="large material-icons mt-4" style="font-size: 50px">delete_forever</i></a></h3>
                                   
                             </div>
-                            <div class="col mb-2" style="padding: left 10px; " >
-                                <a href="<?= base_url(); ?>product" class="btn btn-primary" style="float :right;">Continue Shopping</a> 
-                                
-                                <a href="<?= base_url(); ?>cart/ConfirmPayment/1" " class="btn btn-primary" style="float :right;">Checkout</a>
-                             </div>
+                          
                          </div>
                      </div>
 
@@ -37,5 +33,12 @@
 
              </div>
          <?php endforeach;?>
+
+
+         <div class="col mb-2" style="padding: left 10px; " >
+                                <a href="<?= base_url(); ?>product" class="btn btn-primary" style="float :right;">Continue Shopping</a> 
+                                
+                                <a href="<?= base_url(); ?>cart/ConfirmPayment/1" " class="btn btn-primary" style="float :right;">Checkout</a>
+                             </div>
     </div>
 </div>
