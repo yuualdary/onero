@@ -7,10 +7,10 @@ class Product_model extends CI_model{
     }
     public function addProduct(){
         $data=[
-            "productname" => $this->input->post('product_name', true),
-            "productdescription" => $this->input->post('product_description', true),
-            "productprice" => $this->input->post('product_price', true),
-            "productqty" => $this->input->post('product_qty', true),
+            "product_name" => $this->input->post('product_name', true),
+            "product_description" => $this->input->post('product_description', true),
+            "product_price" => $this->input->post('product_price', true),
+            "product_qty" => $this->input->post('product_qty', true),
 
         ];
 
@@ -20,5 +20,18 @@ class Product_model extends CI_model{
 
     public function getProductById($id){
         return $this->db->get_where('products', ['id' => $id])->row_array();
+    }
+
+
+    public function EditProduct(){
+        $data=[
+            "product_name" => $this->input->post('product_name', true),
+            "product_description" => $this->input->post('product_description', true),
+            "product_price" => $this->input->post('product_price', true),
+            "product_qty" => $this->input->post('product_qty', true),
+
+        ];
+        $this->db->where('id', $this->input->post('id'));
+        $this->db->update('products',$data);
     }
 }
